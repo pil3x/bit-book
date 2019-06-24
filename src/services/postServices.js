@@ -14,7 +14,7 @@ const fetchPosts = () => {
         .then(data => {
             return data.map(post => {
 
-                return new Post(post.id, post.createdAt, post.isPublic, post.type, post.videoUrl, post.imageUrl)
+                return new Post(post.id, post.createdAt, post.isPublic, post.type, post.videoUrl, post.imageUrl, post.text)
             })
         })
 }
