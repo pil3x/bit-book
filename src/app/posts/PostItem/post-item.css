@@ -1,0 +1,26 @@
+.post-item-card {
+    padding: 40px 40px 15px 40px;
+    box-sizing: border-box;
+}
+
+.post-item-text {
+    padding-top: 25px;
+}
+
+.post-item-card p {
+    display: inline;
+    margin: 0;
+    text-transform: capitalize;
+    
+}
+
+.post-item-comment  {
+    float: right;
+}
+
+.post-item-title {
+    margin-top: 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+}
