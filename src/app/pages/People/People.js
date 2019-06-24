@@ -26,7 +26,6 @@ class People extends React.Component {
         const { users } = this.state;
         return (
             <>
-                Hello From People
                 <UserList listOfUsers={users} />
             </>
         )
