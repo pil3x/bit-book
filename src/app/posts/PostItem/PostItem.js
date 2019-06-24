@@ -1,18 +1,19 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
+import ImagePost from '../../posts/PostTypes/ImagePost/ImagePost.js';
+import VideoPost from '../../posts/PostTypes/VideoPost/VideoPost.js';
+import TextPost from '../../posts/PostTypes/TextPost/TextPost.js';
 
 const PostItem = (props) => {
-    console.log(props);
+    const { post } = props
 
-    return (
-        <div className="row">
-            <div className="col s12">
-                <div className="card">
-
-                </div>
-            </div>
-        </div>
-    )
+    if (post.type === 'image') {
+        return <ImagePost post={post} />
+    } else if (post.type === 'video') {
+        return <VideoPost post={post} />
+    } else {
+        return <TextPost post={post} />
+    }
 }
 
 export default PostItem;

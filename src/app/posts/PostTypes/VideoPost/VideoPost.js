@@ -1,13 +1,21 @@
 import React from 'react';
 
-const VideoPost = () => {
-
+const VideoPost = (props) => {
+    const { post } = props;
     return (
-        <iframe id="ytplayer" type="text/html" width="640" height="360"
-            src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
-            frameborder="0">
-        </iframe>
 
+        <div className="row">
+            <div className="col s12">
+                <div className="card">
+                    <iframe id="ytplayer"
+                        type="text/html"
+                        width="1257" height="500"
+                        src={post.videoUrl}
+                        frameBorder="0">
+                    </iframe>
+                </div>
+            </div>
+        </div>
     )
 }
 
