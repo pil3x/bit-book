@@ -1,6 +1,8 @@
 import Post from '../entities/Post.js';
 const axios = require('axios');
 
+
+// Fetching posts from API
 const fetchPosts = () => {
     return axios.get('https://book-api.hypetech.xyz/v1/posts', {
         headers: {
