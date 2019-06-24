@@ -6,6 +6,10 @@ class User {
         this.about = about;
         this.avatarUrl = avatarUrl;
     }
+
+    getFullName() {
+        return `${this.first} ${this.last}`
+    }
 }
 
 export default User;

@@ -7,12 +7,14 @@ const Header = () => {
         <header className="header-holder">
             <nav>
                 <div className="nav-wrapper container">
-                    <Link to="/" className="brand-logo">CommitEdBook</Link>
-                    <ul id="nav-mobile" className="right hide-on-med-and-down">
-                        <li><Link to="/">Feed</Link></li>
-                        <li><Link to="/">People</Link></li>
-                        <li><Link to="/">Profile</Link></li>
-                    </ul>
+                    <div className="row" >
+                        <Link to="/" className="brand-logo">CommitEdBook</Link>
+                        <ul id="nav-mobile" className="right hide-on-med-and-down">
+                            <li><Link to="/">Feed</Link></li>
+                            <li><Link to="/people">People</Link></li>
+                            <li><Link to="/">Profile</Link></li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
 

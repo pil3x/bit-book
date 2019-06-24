@@ -6,7 +6,7 @@ const fetchUsers = () => {
     return axios.get('https://book-api.hypetech.xyz/v1/users', {
         headers: {
             "Content-Type": "application/json",
-            "x-api-key": "B1tD3V",
+            "x-api-key": "B1tD3V"
         }
     })
         .then(response => response.data)
