@@ -4,7 +4,7 @@ const axios = require('axios');
 
 // Fetching posts from API
 const fetchPosts = () => {
-    return axios.get('https://book-api.hypetech.xyz/v1/posts', {
+    return axios.get('https://book-api.hypetech.xyz/v1/posts?_embed=comments', {
         headers: {
             "Content-Type": "application/json",
             "x-api-key": "B1tD3V",

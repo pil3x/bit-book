@@ -1,9 +1,7 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import ImagePost from '../../posts/PostTypes/ImagePost/ImagePost.js';
 import VideoPost from '../../posts/PostTypes/VideoPost/VideoPost.js';
 import TextPost from '../../posts/PostTypes/TextPost/TextPost.js';
-// import '../../PostItem/post-item.css';
 import './post-item.css';
 
 const PostItem = (props) => {

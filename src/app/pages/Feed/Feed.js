@@ -1,6 +1,6 @@
 import React from 'react';
-import { fetchPosts } from '../../../services/postServices.js';
-import PostList from '../../posts/PostList/PostList.js';
+import { fetchPosts } from '../../../services/postServices';
+import PostItem from '../../posts/PostItem/PostItem';
 
 class Feed extends React.Component {
     constructor(props) {
@@ -21,13 +21,9 @@ class Feed extends React.Component {
 
     render() {
         const { posts } = this.state;
-        const { getPostType } = this;
 
-        return (
-            <>
-                <PostList listOfPosts={posts} postType={getPostType} />
-            </>
-        )
+        return posts.map((post, index) => <PostItem key={index} post={post} />)
+
     }
 }
 
