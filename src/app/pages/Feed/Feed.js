@@ -1,6 +1,5 @@
 import React from 'react';
 import { fetchPosts } from '../../../services/postServices.js';
-import PostItem from '../../posts/PostItem/PostItem.js';
 import PostList from '../../posts/PostList/PostList.js';
 
 class Feed extends React.Component {

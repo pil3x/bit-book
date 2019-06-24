@@ -11,7 +11,8 @@ const ImagePost = (props) => {
                         <img src={post.imageUrl} alt="" />
 
                     </div>
-                    <p>{post.type} post</p>
+                    <p className="post-item-type">{post.type} post</p>
+                    <p className="post-item-comment">comments</p>
                 </div>
             </div>
         </div>

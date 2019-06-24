@@ -8,12 +8,14 @@ const VideoPost = (props) => {
             <div className="col s12">
                 <div className="card post-item-card">
                     <iframe id="ytplayer"
+                        title="ytPlayer"
                         type="text/html"
                         width="1178" height="500"
                         src={post.videoUrl}
                         frameBorder="0">
                     </iframe>
-                    <p>{post.type} post</p>
+                    <p className="post-item-type">{post.type} post</p>
+                    <p className="post-item-comment">comments</p>
                 </div>
             </div>
         </div>
