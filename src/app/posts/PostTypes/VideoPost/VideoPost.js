@@ -2,6 +2,7 @@ import React from 'react';
 
 const VideoPost = (props) => {
     const { post } = props;
+    console.log(post);
     return (
 
         <div className="row">
@@ -15,7 +16,7 @@ const VideoPost = (props) => {
                         frameBorder="0">
                     </iframe>
                     <p className="post-item-type">{post.type} post</p>
-                    <p className="post-item-comment">comments</p>
+                    <p className="post-item-comment">{post.comments.length} Comments</p>
                 </div>
             </div>
         </div>
