@@ -18,4 +18,17 @@ const fetchUsers = () => {
             })
         })
 }
-export { fetchUsers };
+// Fething data for Single User Profile
+const fetchSingleUser = (userID) => {
+    return axios.get(`https://book-api.hypetech.xyz/v1/users/${userID}`, {
+        headers: {
+            "Content-Type": "application/json",
+            "x-api-key": "B1tD3V"
+        }
+    })
+        .then(response => response.data)
+        // .then(res => console.log(res))
+        .then(user => new User(user.id, user.name.first, user.name.last, user.about.bio, user.avatarUrl, user.createdAt));
+}
+
+export { fetchUsers, fetchSingleUser };
