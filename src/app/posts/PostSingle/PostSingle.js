@@ -1,5 +1,9 @@
 import React from 'react';
 import { fetchOnePost } from '../../../services/postServices';
+import VideoPost from '../PostTypes/VideoPost/VideoPost';
+import TextPost from '../PostTypes/TextPost/TextPost';
+import ImagePost from '../PostTypes/ImagePost/ImagePost'
+import PostItem from '../PostItem/PostItem';
 
 class PostSingle extends React.Component {
     constructor(props) {
@@ -20,10 +24,19 @@ class PostSingle extends React.Component {
     }
 
     render() {
+        const { post } = this.state;
+
+        if (!post) {
+            return <p>Loading..</p>
+        }
+
+        console.log(post);
         return (
-            <>
-                this is post single
-            </>
+            <div className="row">
+                <div className="col s12">
+                    <PostItem post={post} isCard={false} />
+                </div>
+            </div>
         )
     }
 }
