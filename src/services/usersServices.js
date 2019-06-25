@@ -16,5 +16,4 @@ const fetchUsers = () => {
             })
         })
 }
-
 export { fetchUsers };

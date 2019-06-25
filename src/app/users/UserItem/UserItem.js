@@ -2,9 +2,6 @@ import React from 'react';
 
 const UserItem = (props) => {
     const { user } = props;
-
-
-    console.log(props);
     return (
         <>
             <div className="col s4 m4">
@@ -18,7 +15,6 @@ const UserItem = (props) => {
                     </div>
                 </div>
             </div>
-
         </>
     )
 }

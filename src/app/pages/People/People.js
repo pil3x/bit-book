@@ -7,33 +7,39 @@ class People extends React.Component {
     constructor(props) {
         super(props);
 
-
         this.state = {
             users: [],
             inputValue: '',
         }
     }
+
+    componentDidMount() {
+        this.loadUsers()
+    }
+
     loadUsers = () => {
         fetchUsers()
             .then(users => this.setState({ users }));
 
     }
 
-    onSearchChange(e) {
+    onSearchChange = (e) => {
         this.setState({ inputValue: e.target.value })
     }
 
-
-
-    componentDidMount() {
-        this.loadUsers()
-    }
-
     render() {
-        const { users, onSearchChange } = this.state;
+        const { users, inputValue } = this.state;
+        const { onSearchChange } = this;
+
+        const listOfUsers = users.filter((user) => {
+            return user.getFullName().toLowerCase().includes(inputValue.toLowerCase());
+        });
+
+
+
         return (
             <>
-                <UserList listOfUsers={users} onSearchChange={onSearchChange} />
+                <UserList listOfUsers={listOfUsers} onSearchChange={onSearchChange} inputValue={inputValue} />
             </>
         )
     }
