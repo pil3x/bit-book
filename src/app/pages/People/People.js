@@ -10,6 +10,7 @@ class People extends React.Component {
 
         this.state = {
             users: [],
+            inputValue: '',
         }
     }
     loadUsers = () => {
@@ -18,15 +19,21 @@ class People extends React.Component {
 
     }
 
+    onSearchChange(e) {
+        this.setState({ inputValue: e.target.value })
+    }
+
+
+
     componentDidMount() {
         this.loadUsers()
     }
 
     render() {
-        const { users } = this.state;
+        const { users, onSearchChange } = this.state;
         return (
             <>
-                <UserList listOfUsers={users} />
+                <UserList listOfUsers={users} onSearchChange={onSearchChange} />
             </>
         )
     }
