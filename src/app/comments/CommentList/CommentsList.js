@@ -6,12 +6,22 @@ const CommentList = (props) => {
 
     const { comments } = props;
 
+    let content = ""
+
+    if (comments.length === 0) {
+        content = <div className="no-comments"><h6>No Comments</h6></div>
+    }
+
     return (
-        <ul className="collection comm-list-holder">
-            {comments.map((comment, index) => {
-                return <CommentItem key={index} comment={comment} />
-            })}
-        </ul>
+        <>
+            <ul className="comm-list-holder">
+            {content}
+
+                {comments.map((comment, index) => {
+                    return <CommentItem key={index} comment={comment} />
+                })}
+            </ul>
+        </>
     )
 
 }

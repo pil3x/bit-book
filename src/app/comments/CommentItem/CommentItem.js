@@ -25,9 +25,10 @@ class CommentItem extends React.Component {
     }
 
     render() {
-        
+
         const { comment } = this.props;
         const { user } = this.state;
+        
 
         if (!user) {
             return <p>Loading...</p>
@@ -35,9 +36,12 @@ class CommentItem extends React.Component {
 
         return (
             <>
-                <li className="collection-item avatar comm-item">
-                    <img src={user.avatarUrl} alt="" className="circle" />
-                    <p>{comment.body}</p>
+                <li className="comm-item">
+                    <div className="comm-item-user">
+                        <img src={user.avatarUrl} alt="" className="circle" />
+                        <p className="comm-item-name">{user.first}</p>
+                    </div>
+                    <p className="comm-item-body">{comment.body}</p>
                 </li>
             </>
         )
