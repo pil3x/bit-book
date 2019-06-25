@@ -26,7 +26,7 @@ class Feed extends React.Component {
             return <p>There is no Feed</p>
         }
 
-        return posts.map((post, index) => <PostItem key={index} post={post} />)
+        return posts.map((post, index) => <PostItem key={index} post={post} hasMeta />)
 
     }
 }

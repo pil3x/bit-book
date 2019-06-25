@@ -1,9 +1,7 @@
 import React from 'react';
 import { fetchOnePost } from '../../../services/postServices';
-import VideoPost from '../PostTypes/VideoPost/VideoPost';
-import TextPost from '../PostTypes/TextPost/TextPost';
-import ImagePost from '../PostTypes/ImagePost/ImagePost'
 import PostItem from '../PostItem/PostItem';
+import './post-single.css';
 
 class PostSingle extends React.Component {
     constructor(props) {
@@ -32,7 +30,7 @@ class PostSingle extends React.Component {
 
         console.log(post);
         return (
-            <div className="row">
+            <div className="row post-single-holder">
                 <div className="col s12">
                     <PostItem post={post} isCard={false} />
                 </div>

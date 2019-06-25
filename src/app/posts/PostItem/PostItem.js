@@ -6,7 +6,7 @@ import TextPost from '../../posts/PostTypes/TextPost/TextPost.js';
 import './post-item.css';
 
 const PostItem = (props) => {
-    const { post, isCard = true } = props;
+    const { post, isCard = true, hasMeta = false } = props;
 
     const itemStyle = isCard ? "card post-item-card" : ""
 
@@ -21,15 +21,18 @@ const PostItem = (props) => {
     }
 
     return (
-        <div className="row">
-            <div className="col s12">
-                <Link to={`/posts/${post.id}`}>
-                    <div className={`${itemStyle} post-item-text`}>
-                        {content}
-                    </div>
-                </Link>
+
+        <Link to={`/posts/${post.id}`}>
+            <div className={`${itemStyle} post-type-${post.type}`}>
+                {content}
+                {hasMeta && (
+                    <>
+                        <p className="post-item-type">{post.type} post</p>
+                        <p className="post-item-comment">{post.comments.length} Comments</p>
+                    </>)}
             </div>
-        </div>
+        </Link>
+
     )
 }
 

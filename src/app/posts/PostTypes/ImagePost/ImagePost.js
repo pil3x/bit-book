@@ -6,11 +6,9 @@ const ImagePost = (props) => {
 
     return (
         <>
-            <div className="card-image">
+            <div className="post-single-image card-image">
                 <img src={post.imageUrl} alt="" />
             </div>
-            <p className="post-item-type">{post.type} post</p>
-            <p className="post-item-comment">{post.comments.length} Comments</p>
         </>
     )
 

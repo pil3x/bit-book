@@ -1,0 +1,8 @@
+.post-single-holder {
+    padding: 50px 20px;;
+}
+
+.post-single-image  img {
+    display: block;
+    width: 100%;
+}
