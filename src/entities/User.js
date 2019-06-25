@@ -13,12 +13,7 @@ class User {
         return `${this.first} ${this.last}`
     }
 
-    // getCreatedDate(createdAt) {
-    //     const regDate = new Date(createdAt);
-    //     const dateString = `${regDate.getDate()}.${regDate.getMonth() + 1}.${regDate.getFullYear()}`
-    //     return dateString
 
-    // }
 }
 
 export default User;
