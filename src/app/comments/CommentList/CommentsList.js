@@ -1,20 +1,19 @@
 import React from 'react';
-
 import CommentItem from '../CommentItem/CommentItem';
+import './comment-list.css';
 
-class CommentList extends React.Component {
+const CommentList = (props) => {
 
-    render() {
-        const { comments } = this.props;
+    const { comments } = props;
 
-        return (
-            <ul className="collection">
-                {comments.map((comment, index) => {
-                    return <CommentItem key={index} comment={comment} />
-                })}
-            </ul>
-        )
-    }
+    return (
+        <ul className="collection comm-list-holder">
+            {comments.map((comment, index) => {
+                return <CommentItem key={index} comment={comment} />
+            })}
+        </ul>
+    )
+
 }
 
 export default CommentList;
