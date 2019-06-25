@@ -32,10 +32,8 @@ class People extends React.Component {
         const { onSearchChange } = this;
 
         const listOfUsers = users.filter((user) => {
-            return user.getFullName().toLowerCase().includes(inputValue.toLowerCase());
+            return user.getFullName().toLowerCase().includes(inputValue);
         });
-
-
 
         return (
             <>

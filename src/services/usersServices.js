@@ -12,7 +12,9 @@ const fetchUsers = () => {
         .then(response => response.data)
         .then(users => {
             return users.map(user => {
-                return new User(user.id, user.name.first, user.name.last, user.about.bio, user.avatarUrl);
+                const regDate = new Date(user.createdAt);
+                const date = `${regDate.getDate()}.${regDate.getMonth() + 1}.${regDate.getFullYear()}`
+                return new User(user.id, user.name.first, user.name.last, user.about.bio, user.avatarUrl, date);
             })
         })
 }

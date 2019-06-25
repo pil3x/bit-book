@@ -12,7 +12,8 @@ const UserItem = (props) => {
                         <span className="card-title">{user.getFullName()}</span>
                     </div>
                     <div className="card-content">
-                        <p className="">{user.about}</p>
+                        <p>{user.about}</p>
+                        <p>{user.createdAt}</p>
                     </div>
                 </div>
             </div>
