@@ -2,6 +2,7 @@ import React from 'react';
 import { fetchOnePost } from '../../../services/postServices';
 import PostItem from '../PostItem/PostItem';
 import CommentList from '../../comments/CommentList/CommentsList';
+import { fetchComments } from '../../../services/commentService';
 import './post-single.css';
 
 class PostSingle extends React.Component {
@@ -9,21 +10,27 @@ class PostSingle extends React.Component {
         super(props);
 
         this.state = {
-            post: null
+            post: null,
+            comments: [],
         }
     }
 
-    loadPost() {
-        const postID = this.props.match.params.id;
-        fetchOnePost(postID).then(post => this.setState({ post }))
+    loadPageData() {
+        const postId = this.props.match.params.id;
+
+        fetchOnePost(postId)
+            .then(post => this.setState({ post }))
+
+        fetchComments(postId)
+            .then(comments => this.setState({ comments }))
     }
 
     componentDidMount() {
-        this.loadPost()
+        this.loadPageData()
     }
 
     render() {
-        const { post } = this.state;
+        const { post, comments } = this.state;
 
         if (!post) {
             return <p>Loading..</p>
@@ -33,7 +40,7 @@ class PostSingle extends React.Component {
             <div className="row post-single-holder">
                 <div className="col s12">
                     <PostItem post={post} isCard={false} />
-                    <CommentList post={post} />
+                    <CommentList comments={comments} />
                 </div>
             </div>
         )

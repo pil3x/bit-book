@@ -1,16 +1,28 @@
 import React from 'react';
+// import { fetchSingleUser } from '../../../services/usersServices';
 
 
-const CommentItem = (props) => {
+class CommentItem extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-    const { comment } = props;
+    componentDidMount() {
+        // const { comment } = this.props;
+        // fetch users for user image
+    }
 
-    return (
-        <li className="collection-item avatar">
-            <img src="images/yuna.jpg" alt="" className="circle" />
-            <p>{comment.body}</p>
-        </li>
-    )
+    render() {
+
+        return (
+            <>
+                {/* <li className="collection-item avatar">
+                    <img src="images/yuna.jpg" alt="" className="circle" />
+                    <p>{comment.body}</p>
+                </li> */}
+            </>
+        )
+    }
 }
 
 export default CommentItem;
