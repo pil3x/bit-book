@@ -1,9 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const ImagePost = (props) => {
     const { post } = props;
 
+    // console.log(post);
+    if (!post.imageUrl) {
+        return <img src='https://tinyurl.com/yaqa8yko' alt="" />
+    }
     return (
         <>
             <div className="post-single-image card-image">

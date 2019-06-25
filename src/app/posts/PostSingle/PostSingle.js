@@ -1,6 +1,7 @@
 import React from 'react';
 import { fetchOnePost } from '../../../services/postServices';
 import PostItem from '../PostItem/PostItem';
+import CommentList from '../../comments/CommentList/CommentsList';
 import './post-single.css';
 
 class PostSingle extends React.Component {
@@ -28,11 +29,11 @@ class PostSingle extends React.Component {
             return <p>Loading..</p>
         }
 
-        console.log(post);
         return (
             <div className="row post-single-holder">
                 <div className="col s12">
                     <PostItem post={post} isCard={false} />
+                    <CommentList post={post} />
                 </div>
             </div>
         )

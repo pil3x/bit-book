@@ -20,8 +20,8 @@ const PostItem = (props) => {
         content = <TextPost post={post} />
     }
 
-    return (
 
+    return (
         <Link to={`/posts/${post.id}`}>
             <div className={`${itemStyle} post-type-${post.type}`}>
                 {content}
