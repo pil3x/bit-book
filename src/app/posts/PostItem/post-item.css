@@ -3,15 +3,10 @@
     box-sizing: border-box;
 }
 
-.post-item-text {
-    padding-top: 25px;
-}
-
 .post-item-card p {
     display: inline;
     margin: 0;
     text-transform: capitalize;
-    
 }
 
 .post-item-comment  {

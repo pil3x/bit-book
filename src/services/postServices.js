@@ -19,4 +19,18 @@ const fetchPosts = () => {
         })
 }
 
-export { fetchPosts }
+// Fetching one post based on it's ID
+
+const fetchOnePost = (postId) => {
+    return axios.get(`https://book-api.hypetech.xyz/v1/posts/${postId}`, {
+        headers: {
+            "Content-Type": "application/json",
+            "x-api-key": "B1tD3V",
+        }
+    })
+        .then(response => response.data)
+        .then(post => new Post(post.id, post.createdAt, post.isPublic, post.type, post.videoUrl, post.imageUrl, post.text, post.comments))
+
+}
+
+export { fetchPosts, fetchOnePost }
