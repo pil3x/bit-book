@@ -8,11 +8,12 @@ import Feed from '../app/pages/Feed/Feed.js';
 import PostSingle from './posts/PostSingle/PostSingle.js';
 
 import './App.css';
+import RegisterPage from './pages/RegisterPage/RegisterPage.js';
 
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header />
       <Main>
         <Switch>
           <Route path="/posts/:id" component={PostSingle} />
@@ -21,7 +22,9 @@ function App() {
           <Redirect to='/posts' />
         </Switch>
       </Main>
-      <Footer />
+      <Footer /> */}
+
+      <RegisterPage />
     </>
   );
 }
