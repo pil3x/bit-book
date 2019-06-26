@@ -18,7 +18,9 @@ const fetchUsers = () => {
             })
         })
 }
-// Fething data for Single User Profile
+
+// Fetching data for Single User Profile
+
 const fetchSingleUser = (userID) => {
     return axios.get(`https://book-api.hypetech.xyz/v1/users/${userID}`, {
         headers: {
@@ -27,7 +29,6 @@ const fetchSingleUser = (userID) => {
         }
     })
         .then(response => response.data)
-        // .then(res => console.log(res))
         .then(user => new User(user.id, user.name.first, user.name.last, user.about.bio, user.avatarUrl, user.createdAt));
 }
 
