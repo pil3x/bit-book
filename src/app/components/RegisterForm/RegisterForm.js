@@ -3,7 +3,8 @@ import './register-form.css';
 
 const RegisterForm = () => {
     return (
-        <div className="reg-form row">
+        <>
+
             <form className="col s12" autoComplete="off">
                 <div className="row">
                     <div className="input-field col s6">
@@ -27,7 +28,7 @@ const RegisterForm = () => {
                     <i className="material-icons right">send</i>
                 </button>
             </form>
-        </div>
+        </ >
     )
 }
 

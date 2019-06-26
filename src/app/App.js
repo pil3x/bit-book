@@ -8,8 +8,7 @@ import Feed from '../app/pages/Feed/Feed.js';
 import PostSingle from './posts/PostSingle/PostSingle.js';
 
 import './App.css';
-import RegisterPage from './pages/RegisterPage/RegisterPage.js';
-import LogInPage from './pages/LogInPage/LogInPage.js';
+import RegisterLogInPage from './pages/RegisterPage/RegisterLogInPage.js';
 
 function App() {
   return (
@@ -28,8 +27,7 @@ function App() {
       {/* <RegisterPage /> */}
       {/* <LogInPage /> */}
       <Switch>
-        <Route path="/register" component={RegisterPage} />
-        <Route path="/login" component={LogInPage} />
+        <Route path="/(register|login)" component={RegisterLogInPage} />
         <Redirect to="/register" />
       </Switch>
     </>

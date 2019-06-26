@@ -3,7 +3,7 @@ import './log-in-form.css';
 
 const LogInForm = () => {
     return (
-        <div className="log-form row">
+        <>
             <form className="col s12" autoComplete="off">
                 <div className="row">
                     <div className="input-field col s12">
@@ -19,7 +19,7 @@ const LogInForm = () => {
                     <i className="material-icons right">send</i>
                 </button>
             </form>
-        </div>
+        </>
     )
 }
 

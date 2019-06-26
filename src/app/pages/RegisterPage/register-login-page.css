@@ -1,0 +1,25 @@
+.reg-log-page {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 100vh;
+    background-image: url('./images/register-log-background.jpg');
+    
+}
+
+.reg-log-form {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    width: 50%;
+    min-height: 404px;
+}
+
+.reg-log-buttons {
+    margin-bottom: 20px;
+}
+
+.reg-log-page-form {
+    display: flex;
+    justify-content: center;
+}
