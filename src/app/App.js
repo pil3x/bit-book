@@ -24,8 +24,6 @@ function App() {
       </Main>
       <Footer /> */}
 
-      {/* <RegisterPage /> */}
-      {/* <LogInPage /> */}
       <Switch>
         <Route path="/(register|login)" component={RegisterLogInPage} />
         <Redirect to="/register" />

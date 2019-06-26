@@ -3,8 +3,7 @@
     position: relative;
     align-items: center;
     height: 100vh;
-    background-image: url('./images/register-log-background.jpg');
-    
+    background-image: url('./images/register-log-background-2.jpg');
 }
 
 .reg-log-form {
@@ -13,6 +12,24 @@
     margin: 0 auto;
     width: 50%;
     min-height: 404px;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.reg-log-form form {
+    position: relative;
+    z-index: 1;
+}
+
+.reg-log-form:after {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 0;
 }
 
 .reg-log-buttons {
