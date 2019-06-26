@@ -1,0 +1,15 @@
+.log-form {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+
+.log-form-btn.btn {
+    width: 100%;
+}
+
+.log-form input {
+    color: #fff;
+}

@@ -1,8 +1,8 @@
 import React from 'react';
-import RegisterForm from '../../components/RegisterForm/RegisterForm';
-import './register-page.css';
+import './log-in-page.css';
+import LogInForm from '../../components/LogInForm/LogInForm';
 
-class RegisterPage extends React.Component {
+class LogInPage extends React.Component {
     constructor(props) {
         super(props);
 
@@ -17,11 +17,11 @@ class RegisterPage extends React.Component {
 
     render() {
         return (
-            <div className="reg-page">
+            <div className="log-page">
                 <div className="container">
 
-                    <div className="reg-page-form col s12">
-                        <RegisterForm />
+                    <div className="log-page-form col s12">
+                        <LogInForm />
                     </div>
                 </div>
             </div>
@@ -30,4 +30,4 @@ class RegisterPage extends React.Component {
 
 }
 
-export default RegisterPage;
+export default LogInPage;

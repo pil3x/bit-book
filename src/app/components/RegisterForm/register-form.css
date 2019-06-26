@@ -1,0 +1,15 @@
+.reg-form {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+
+.reg-form-btn.btn {
+    width: 100%;
+}
+
+.reg-form input {
+    color: #fff;
+}

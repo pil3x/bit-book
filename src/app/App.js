@@ -9,6 +9,7 @@ import PostSingle from './posts/PostSingle/PostSingle.js';
 
 import './App.css';
 import RegisterPage from './pages/RegisterPage/RegisterPage.js';
+import LogInPage from './pages/LogInPage/LogInPage.js';
 
 function App() {
   return (
@@ -24,7 +25,13 @@ function App() {
       </Main>
       <Footer /> */}
 
-      <RegisterPage />
+      {/* <RegisterPage /> */}
+      {/* <LogInPage /> */}
+      <Switch>
+        <Route path="/register" component={RegisterPage} />
+        <Route path="/login" component={LogInPage} />
+        <Redirect to="/register" />
+      </Switch>
     </>
   );
 }

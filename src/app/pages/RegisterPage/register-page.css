@@ -1,0 +1,13 @@
+.reg-page {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 100vh;
+    background-image: url('./images/register-background.jpg');
+    
+}
+
+.reg-page-form {
+    display: flex;
+    justify-content: center;
+}
