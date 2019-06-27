@@ -4,7 +4,11 @@ const Main = (props) => {
     return (
         <main>
             <div className="container">
-                {props.children}
+                <div className="row">
+                    <div className="col s12">
+                        {props.children}
+                    </div>
+                </div>
             </div>
         </main>
     )

@@ -14,7 +14,7 @@ const Header = () => {
                                 <li><Link to="/posts">Feed</Link></li>
                                 <li><Link to="/people">People</Link></li>
                                 <li><Link to="">Profile</Link></li>
-                                <li><Link onClick={() => {
+                                <li><Link to="" onClick={() => {
                                     localStorage.clear();
                                     document.location.reload();
                                 }}>LogOut</Link></li>

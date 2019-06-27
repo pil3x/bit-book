@@ -21,7 +21,7 @@ class Feed extends React.Component {
 
     render() {
         const { posts } = this.state;
-
+        console.log(this.props);
         if (!posts) {
             return <p>There is no Feed</p>
         }

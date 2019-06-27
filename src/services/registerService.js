@@ -13,7 +13,6 @@ const fetchRegisterToken = (name, email, password) => {
     })
         .then(response => response.data)
         .then(data => {
-            console.log(data);
             localStorage.setItem("registerToken", data.accessToken)
         })
         .catch(error => Promise.reject(error.response.data.message))

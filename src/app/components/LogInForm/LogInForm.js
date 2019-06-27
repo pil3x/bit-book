@@ -53,9 +53,9 @@ class LogInForm extends React.Component {
         let errors = {}
 
         if (!email.includes('@')) {
-            errors.email = "Invalid email"
+            errors.email = "Invalid email";
         } else if (password.length < 3 && password.length !== 0) {
-            errors.password = "Invalid password"
+            errors.password = "Invalid password";
         } else {
             errors = {}
         }
@@ -77,22 +77,21 @@ class LogInForm extends React.Component {
 
     render() {
         const { onInputChange, onSubmit } = this;
-        const { email, password, serverError } = this.state;
+        const { email, password, errors, serverError } = this.state;
 
-        // console.log(serverError);
         return (
             <>
                 <form className="col s12" autoComplete="off" onSubmit={onSubmit}>
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="email" name="email" placeholder="Email" type="text" className="validate" value={email} onChange={onInputChange} />
-                            <p className="reg-log-error">{this.state.errors.email}</p>
+                            <p className="reg-log-error">{errors.email}</p>
                         </div>
                     </div>
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="password" name="password" placeholder="Password" type="password" className="validate" value={password} onChange={onInputChange} />
-                            <p className="reg-log-error">{this.state.errors.password}</p>
+                            <p className="reg-log-error">{errors.password}</p>
                         </div>
                     </div>
                     <button className="reg-log-form-btn btn waves-effect waves-light" type="submit" name="action" disabled={!this.state.isFormValid}>Log in
