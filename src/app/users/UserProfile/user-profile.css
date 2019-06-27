@@ -1,0 +1,34 @@
+.user-profile-main-container{
+    width: 100%;
+    text-align: center;
+}
+.user-profile-container{
+    display: inline-block;
+    margin: 40px;
+    /* width: 800px; */
+}
+.user-profile-image-holder{
+    display: block;
+    width: 500px;
+    height: 200px;  
+    margin-top: 30px;
+    text-align: center;
+}
+.user-profile-image-holder img{
+    max-width: 400px;
+    border-radius: 100%;
+    
+}
+.user-profile-info-holder{
+    display: flex;
+    justify-content: space-between;
+}
+.user-profile-info-holder p{
+    padding: 0 30px;
+    background: rgb(185, 185, 185);
+    font-size: 25px;
+    border-radius: 20px;
+
+}
+
+

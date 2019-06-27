@@ -21,8 +21,12 @@ class Feed extends React.Component {
 
     render() {
         const { posts } = this.state;
+        console.log(this.props);
+        if (!posts) {
+            return <p>There is no Feed</p>
+        }
 
-        return posts.map((post, index) => <PostItem key={index} post={post} />)
+        return posts.map((post, index) => <PostItem key={index} post={post} hasMeta />)
 
     }
 }

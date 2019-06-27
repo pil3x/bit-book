@@ -7,8 +7,9 @@ class Post {
         this.videoUrl = videoUrl;
         this.imageUrl = imageUrl;
         this.text = text;
-        this.comments = comments;
+        this.comments = comments || [];
     }
+
 }
 
 export default Post;
