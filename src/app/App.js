@@ -8,6 +8,7 @@ import Feed from '../app/pages/Feed/Feed';
 import PostSingle from './posts/PostSingle/PostSingle';
 import { isLoggedIn } from '../services/loginServices';
 import './App.css';
+import UserProfile from '../app/users/UserProfile/UserProfile';
 import RegisterLogInPage from './pages/RegisterPage/RegisterLogInPage';
 
 class App extends React.Component {
@@ -29,6 +30,7 @@ class App extends React.Component {
           <Main>
             <Switch>
               <Route path="/posts/:id" component={PostSingle} />
+              <Route path="/people/:id" component={UserProfile} />
               <Route path="/people" component={UserItem} />
               <Route path="/posts" component={Feed} />
               <Redirect to='/posts' />
