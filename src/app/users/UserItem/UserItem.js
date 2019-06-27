@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const UserItem = (props) => {
     const { user } = props;
@@ -8,7 +9,7 @@ const UserItem = (props) => {
             <div className="col s4 m4">
                 <div className="card">
                     <div className="card-image">
-                        {(!user.avatarUrl) ? <img src={errorIMG} alt="img" /> : <img src={user.avatarUrl} alt="img" />}
+                        <Link to={`/people/${user.id}`} > {(!user.avatarUrl) ? <img src={errorIMG} alt="img" /> : <img src={user.avatarUrl} alt="img" />} </ Link>
                         <span className="card-title">{user.getFullName()}</span>
                     </div>
                     <div className="card-content">

@@ -8,6 +8,7 @@ import Feed from '../app/pages/Feed/Feed.js';
 import PostSingle from './posts/PostSingle/PostSingle.js';
 
 import './App.css';
+import SingleUser from './users/UserProfile/UserProfile.js';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Header />
       <Main>
         <Switch>
+          <Route path="/people/:id" component={SingleUser} />
           <Route path="/posts/:id" component={PostSingle} />
           <Route path="/people" component={UserItem} />
           <Route path="/posts" component={Feed} />
@@ -25,5 +27,4 @@ function App() {
     </>
   );
 }
-
 export default App;
