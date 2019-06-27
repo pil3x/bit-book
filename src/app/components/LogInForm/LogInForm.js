@@ -23,9 +23,16 @@ class LogInForm extends React.Component {
         e.preventDefault();
         const { email, password } = this.state;
 
+        fetchLogInToken(email, password)
+            .then(() => {
+                // this.props.history.push('/people');
+                window.location.reload();
+            })
+
+
         //ovde pises i catch i redirectujes ako je sc 200
 
-        console.log(fetchLogInToken(email, password))
+
     }
 
 

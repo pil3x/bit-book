@@ -12,17 +12,29 @@ const fetchLogInToken = (email, password) => {
 
     })
         .then(response => response.data)
-        .catch(error => Promise.reject(error.response.data.message))
+        .then(data => {
+            localStorage.setItem("token", data.accessToken)
+        })
+    // .catch(error => Promise.reject(error.response.data.message))
 }
 
-export { fetchLogInToken }
+const isLoggedIn = () => {
 
+    const logInToken = localStorage.getItem("token");
+    const token = logInToken ? logInToken : null;
+    console.log(token);
+    return (token === null ? false : true);
+}
+
+export { fetchLogInToken, isLoggedIn }
+
+//isLogedIn - vraca true ili false, ako postoji onda je true...
 
 
 //kad dobijemo response, postavljamo uslov za ispitivanje da li postoje greske, ukoliko postoji greska return
 
     // u sledecem thenu bi trebalo da dobijemo objekat koji u sebi ima accessToken koji setujemo u localStorage
-    // kad dobijemo te podate u loginPage-u tamo gde smo pozvali funkciju treba da se redirektujemo na feed
+    // kad dobijemo te podatke u loginPage-u tamo gde smo pozvali funkciju treba da se redirektujemo na feed
 
     //ako imamo error  imamo catch() na kraju koji vraca neki error message - na kaju pozvane funkcije u loginform komponenti gde mu setujemo stateu tu poruku iz message
     //taj eror ubacujemo i u state, jer ce nam trebati za rendanje na formi
