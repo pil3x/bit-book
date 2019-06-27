@@ -63,6 +63,7 @@ class LogInForm extends React.Component {
         this.setState({
             errors
         })
+
         return (!email.includes('@') || password.length < 3) ? false : true;
 
     }
