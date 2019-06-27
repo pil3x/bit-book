@@ -1,12 +1,20 @@
 import User from '../entities/User.js';
 const axios = require('axios');
+var jwtDecode = require('jwt-decode');
+
+const loadTokenId = () => {
+    const decoded = jwtDecode(localStorage.getItem("token"))
+
+    return decoded.id;
+} 
 
 // Fething Users from API 
 const fetchUsers = () => {
     return axios.get('https://book-api.hypetech.xyz/v1/users?_embed=comments', {
         headers: {
             "Content-Type": "application/json",
-            "x-api-key": "B1tD3V"
+            "x-api-key": "B1tD3V",
+            'Authorization': `Bearer ${localStorage.getItem("token")}`
         }
     })
         .then(response => response.data)
@@ -18,12 +26,14 @@ const fetchUsers = () => {
             })
         })
 }
+
 // Fetching data for Single User Profile
 const fetchSingleUser = (userID) => {
     return axios.get(`https://book-api.hypetech.xyz/v1/users/${userID}`, {
         headers: {
             "Content-Type": "application/json",
-            "x-api-key": "B1tD3V"
+            "x-api-key": "B1tD3V",
+            'Authorization': `Bearer ${localStorage.getItem("token")}`
         }
     })
         .then(response => response.data)
@@ -40,6 +50,7 @@ const fetchUserPostNumber = (userId) => {
         headers: {
             "Content-Type": "application/json",
             "x-api-key": "B1tD3V",
+            'Authorization': `Bearer ${localStorage.getItem("token")}`
         }
     })
         .then(response => {
@@ -47,4 +58,18 @@ const fetchUserPostNumber = (userId) => {
         })
 }
 
-export { fetchUsers, fetchSingleUser, fetchUserPostNumber };
+const fetchLoggedUser = () => {
+    const decoded = loadTokenId();
+    
+    return axios.get(`https://book-api.hypetech.xyz/v1/users/${decoded}`, {
+        headers: {
+            "Content-Type": "application/json",
+            "x-api-key": "B1tD3V",
+            'Authorization': `Bearer ${localStorage.getItem("token")}`
+        }
+    })
+        .then(response => response.data )
+        .then(user => new User(user.id, user.name.first, user.name.last, user.about.bio, user.avatarUrl, user.createdAt, user.comments, user.posts));
+}
+
+export { fetchUsers, fetchSingleUser, fetchUserPostNumber,  fetchLoggedUser};
