@@ -4,6 +4,7 @@
     align-items: center;
     height: 100vh;
     background-image: url('./images/register-log-background-2.jpg');
+   
 }
 
 .reg-log-form {
@@ -29,6 +30,10 @@
 .reg-log-form input,
 .reg-log-error {
     color: #fff;
+}
+
+.reg-log-error {
+    margin-bottom: 0;
 }
 
 .reg-log-form:after {

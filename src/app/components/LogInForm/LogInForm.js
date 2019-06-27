@@ -10,7 +10,8 @@ class LogInForm extends React.Component {
             email: "",
             password: "",
             serverError: "",
-            errors: {}
+            errors: {},
+            isFormValid: false
         }
     }
 
@@ -20,13 +21,14 @@ class LogInForm extends React.Component {
 
 
         this.setState({
-            [name]: value
+            [name]: value,
+            isFormValid: this.isValidForm()
         })
     }
 
 
     fetchingData() {
-        const { email, password, serverError } = this.state;
+        const { email, password } = this.state;
 
         if (email === '' || password === '') {
             return
@@ -50,7 +52,19 @@ class LogInForm extends React.Component {
 
     isValidForm() {
         const { email, password } = this.state;
+        let errors = {}
 
+        if (!email.includes('@')) {
+            errors.email = "Invalid email"
+        } else if (password.length < 3 && password.length !== 0) {
+            errors.password = "Invalid password"
+        } else {
+            errors = {}
+        }
+
+        this.setState({
+            errors
+        })
         return (!email.includes('@') || password.length < 3) ? false : true;
 
     }
@@ -66,23 +80,29 @@ class LogInForm extends React.Component {
         const { onInputChange, onSubmit } = this;
         const { email, password, serverError } = this.state;
 
+
+
+
         return (
             <>
                 <form className="col s12" autoComplete="off" onSubmit={onSubmit}>
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="email" name="email" placeholder="Email" type="text" className="validate" value={email} onChange={onInputChange} />
-                            <p className="reg-log-error">{serverError}</p>
+                            <p className="reg-log-error">{this.state.errors.email}</p>
+
                         </div>
                     </div>
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="password" name="password" placeholder="Password" type="password" className="validate" value={password} onChange={onInputChange} />
+                            <p className="reg-log-error">{this.state.errors.password}</p>
                         </div>
                     </div>
-                    <button className="reg-log-form-btn btn waves-effect waves-light" type="submit" name="action">Log in
+                    <button className="reg-log-form-btn btn waves-effect waves-light" type="submit" name="action" disabled={!this.state.isFormValid}>Log in
                        <i className="material-icons right">send</i>
                     </button>
+                    <p className="reg-log-error">{serverError}</p>
                 </form>
             </>
         )
