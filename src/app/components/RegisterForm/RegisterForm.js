@@ -79,10 +79,6 @@ class RegisterForm extends React.Component {
         const { name, email, password, errors } = this.state;
         const { onInputChange, onSubmit } = this;
 
-        const inputStyle = {
-            display: "none"
-        }
-
         return (
             <>
 

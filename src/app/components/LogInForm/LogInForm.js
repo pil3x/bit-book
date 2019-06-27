@@ -78,9 +78,7 @@ class LogInForm extends React.Component {
     render() {
         const { onInputChange, onSubmit } = this;
         const { email, password, errors, serverError } = this.state;
-        const inputStyle = {
-            display: "none"
-        }
+    
         
         return (
             <>
