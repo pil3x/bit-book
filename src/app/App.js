@@ -6,6 +6,7 @@ import Footer from '../app/components/Footer/Footer';
 import UserItem from '../app/pages/People/People';
 import Feed from '../app/pages/Feed/Feed';
 import PostSingle from './posts/PostSingle/PostSingle';
+import LoggedUserProfile from '../app/users/LoggedUserProfile/LoggedUserProfile';
 import { isLoggedIn } from '../services/loginServices';
 import './App.css';
 import UserProfile from '../app/users/UserProfile/UserProfile';
@@ -31,6 +32,7 @@ class App extends React.Component {
             <Switch>
               <Route path="/posts/:id" component={PostSingle} />
               <Route path="/people/:id" component={UserProfile} />
+              <Route path="/profile" component={LoggedUserProfile} />
               <Route path="/people" component={UserItem} />
               <Route path="/posts" component={Feed} />
               <Redirect to='/posts' />
