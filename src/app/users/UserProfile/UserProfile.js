@@ -43,7 +43,6 @@ class SingleUser extends React.Component {
                         </div>
                     </div>
                 </div>
-
             </>
         )
     }

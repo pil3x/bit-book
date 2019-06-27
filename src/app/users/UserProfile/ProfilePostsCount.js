@@ -8,7 +8,6 @@ class ProfilePostsCount extends React.Component {
             postsCount: 0
         }
     }
-
     componentDidMount() {
         this.loadUserPosts()
     }
@@ -22,12 +21,11 @@ class ProfilePostsCount extends React.Component {
     render() {
         const { postsCount } = this.state;
         return (
+
             <>
                 {postsCount}
             </>
-
         )
     }
-
 }
 export default ProfilePostsCount;
