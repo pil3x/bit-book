@@ -22,7 +22,12 @@
     z-index: 1;
 }
 
-.reg-log-form input {
+.reg-log-form-btn.btn {
+    width: 100%;
+}
+
+.reg-log-form input,
+.reg-log-error {
     color: #fff;
 }
 
@@ -44,3 +49,4 @@
     display: flex;
     justify-content: center;
 }
+ 
