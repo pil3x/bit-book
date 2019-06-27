@@ -7,7 +7,7 @@
     display: block;
 }
 
-.user-item .card .card-content {
+.user-item.card .card-content {
     padding: 24px 24px 20px 24px;
 }
 
