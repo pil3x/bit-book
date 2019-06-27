@@ -85,7 +85,6 @@ class LogInForm extends React.Component {
         return (
             <>
                 <form className="col s12" autoComplete="off" onSubmit={onSubmit}>
-                <input autoComplete="anyrandomstring" name="hidden" type="text" style={inputStyle}/>
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="email" name="email" placeholder="Email" type="text" className="validate" value={email} onChange={onInputChange} />
