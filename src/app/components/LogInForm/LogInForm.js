@@ -84,13 +84,13 @@ class LogInForm extends React.Component {
                 <form className="col s12" autoComplete="off" onSubmit={onSubmit}>
                     <div className="row">
                         <div className="input-field col s12">
-                            <input id="email" name="email" placeholder="Email" type="text" className="validate" value={email} onChange={onInputChange} />
+                            <input autoComplete="false" id="email" name="email" placeholder="Email" type="text" className="validate" value={email} onChange={onInputChange} />
                             <p className="reg-log-error">{errors.email}</p>
                         </div>
                     </div>
                     <div className="row">
                         <div className="input-field col s12">
-                            <input id="password" name="password" placeholder="Password" type="password" className="validate" value={password} onChange={onInputChange} />
+                            <input autoComplete="false" id="password" name="password" placeholder="Password" type="password" className="validate" value={password} onChange={onInputChange} />
                             <p className="reg-log-error">{errors.password}</p>
                         </div>
                     </div>

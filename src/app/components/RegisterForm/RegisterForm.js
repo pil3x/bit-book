@@ -85,19 +85,19 @@ class RegisterForm extends React.Component {
                 <form className="col s12" autoComplete="off" onSubmit={onSubmit}>
                     <div className="row">
                         <div className="input-field col s12">
-                            <input placeholder="Name" id="_name" type="text" className="validate" name="name" value={name} onChange={onInputChange} />
+                            <input autoComplete="false" placeholder="Name" id="_name" type="text" className="validate" name="name" value={name} onChange={onInputChange} />
                             <p className="reg-log-error">{errors.name}</p>
                         </div>
                     </div>
                     <div className="row">
                         <div className="input-field col s12">
-                            <input id="email" placeholder="Email" type="text" className="validate" name="email" value={email} onChange={onInputChange} />
+                            <input autoComplete="false" id="email" placeholder="Email" type="text" className="validate" name="email" value={email} onChange={onInputChange} />
                             <p className="reg-log-error">{errors.email}</p>
                         </div>
                     </div>
                     <div className="row">
                         <div className="input-field col s12">
-                            <input id="password" placeholder="Password" type="password" className="validate" name="password" value={password} onChange={onInputChange} />
+                            <input autoComplete="false" id="password" placeholder="Password" type="password" className="validate" name="password" value={password} onChange={onInputChange} />
                             <p className="reg-log-error">{errors.password}</p>
                         </div>
                     </div>
