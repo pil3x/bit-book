@@ -78,11 +78,13 @@ class LogInForm extends React.Component {
     render() {
         const { onInputChange, onSubmit } = this;
         const { email, password, errors, serverError } = this.state;
-
+        const inputStyle = {
+            display: "none"
+        }
         return (
             <>
                 <form className="col s12" autoComplete="off" onSubmit={onSubmit}>
-                <input autoComplete="false" name="hidden" type="text" style="display:none;"/>
+                <input autoComplete="false" name="hidden" type="text" style={inputStyle}/>
                     <div className="row">
                         <div className="input-field col s12">
                             <input id="email" name="email" placeholder="Email" type="text" className="validate" value={email} onChange={onInputChange} />

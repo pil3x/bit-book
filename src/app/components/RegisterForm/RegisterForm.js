@@ -77,13 +77,17 @@ class RegisterForm extends React.Component {
     render() {
 
         const { name, email, password, errors } = this.state;
-        const { onInputChange, onSubmit } = this
+        const { onInputChange, onSubmit } = this;
+
+        const inputStyle = {
+            display: "none"
+        }
 
         return (
             <>
 
                 <form className="col s12" autoComplete="off" onSubmit={onSubmit}>
-                <input autoComplete="false" name="hidden" type="text" style="display:none;"/>
+                <input autoComplete="false" name="hidden" type="text" style={inputStyle}/>
                     <div className="row">
                         <div className="input-field col s12">
                             <input  placeholder="Name" id="_name" type="text" className="validate" name="name" value={name} onChange={onInputChange} />
