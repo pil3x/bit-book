@@ -2,7 +2,6 @@ import Comment from '../entities/Comment'
 const axios = require('axios');
 
 //Fetch comments for specific post, based on its id
-
 const fetchComments = (postId) => {
     return axios.get(`https://book-api.hypetech.xyz/v1/comments?postId=${postId}`, {
         headers: {
