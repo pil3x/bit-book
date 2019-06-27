@@ -27,10 +27,3 @@ const isLoggedIn = () => {
 }
 
 export { fetchLogInToken, isLoggedIn }
-
-
-
-//kad dobijemo response, postavljamo uslov za ispitivanje da li postoje greske, ukoliko postoji greska return
-
-    //ako imamo error  imamo catch() na kraju koji vraca neki error message - na kaju pozvane funkcije u loginform komponenti gde mu setujemo stateu tu poruku iz message
-    //taj eror ubacujemo i u state, jer ce nam trebati za rendanje na formi

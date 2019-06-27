@@ -34,8 +34,6 @@ class LogInForm extends React.Component {
             return
         }
 
-        // let errors = {}
-
         if (!this.isValidForm()) {
             return
         }
@@ -80,9 +78,7 @@ class LogInForm extends React.Component {
         const { onInputChange, onSubmit } = this;
         const { email, password, serverError } = this.state;
 
-
-
-
+        // console.log(serverError);
         return (
             <>
                 <form className="col s12" autoComplete="off" onSubmit={onSubmit}>
@@ -90,7 +86,6 @@ class LogInForm extends React.Component {
                         <div className="input-field col s12">
                             <input id="email" name="email" placeholder="Email" type="text" className="validate" value={email} onChange={onInputChange} />
                             <p className="reg-log-error">{this.state.errors.email}</p>
-
                         </div>
                     </div>
                     <div className="row">
