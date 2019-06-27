@@ -38,8 +38,18 @@ class SingleUser extends React.Component {
                         </div>
                         <p>{user.about}</p>
                         <div className="user-profile-info-holder">
-                            <p><ProfilePostsCount userId={userId} /> Posts</p>
-                            <p><ProfileCommentsCount userId={userId} /> Comments</p>
+                            <p>
+                                <span className="user-profile-post-num">
+                                    <ProfilePostsCount userId={userId} />
+                                </span>
+                                 Posts
+                                </p>
+                            <p>
+                                <span className="user-profile-comm-num">
+                                    <ProfileCommentsCount userId={userId} />
+                                </span>
+                                 Comments
+                                </p>
                         </div>
                     </div>
                 </div>

@@ -10,25 +10,39 @@
 .user-profile-image-holder{
     display: block;
     width: 500px;
-    height: 200px;  
     margin-top: 30px;
     text-align: center;
 }
 .user-profile-image-holder img{
-    max-width: 400px;
+    min-width: 400px;
     border-radius: 100%;
     
 }
-.user-profile-info-holder{
-    display: flex;
-    justify-content: space-between;
-}
+
 .user-profile-info-holder p{
-    padding: 0 30px;
-    background: rgb(185, 185, 185);
-    font-size: 25px;
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px 11px 50px;
+    background:#fff;
+    font-size: 15px;
     border-radius: 20px;
 
 }
 
+.user-profile-info-holder p:first-child {
+    margin-right: 30px;
+}
+
+.user-profile-post-num,
+.user-profile-comm-num {
+    position: absolute;
+    width: 42px;
+    top: 0;
+    left: 0;
+    margin-right: 10px;
+    padding: 10px;
+    color: #fff;
+    background: #298c86;
+    border-radius: 100%;
+}
 
