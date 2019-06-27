@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import './user-item.css';
 
 const UserItem = (props) => {
     const { user } = props;
@@ -7,7 +8,7 @@ const UserItem = (props) => {
     return (
         <>
             <div className="col s4 m4">
-                <div className="card">
+                <div className="user-item card">
                     <div className="card-image">
                         <Link to={`/people/${user.id}`} > {(!user.avatarUrl) ? <img src={errorIMG} alt="img" /> : <img src={user.avatarUrl} alt="img" />} </ Link>
                         <span className="card-title">{user.getFullName()}</span>
