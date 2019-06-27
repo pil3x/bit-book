@@ -87,7 +87,7 @@ class RegisterForm extends React.Component {
             <>
 
                 <form className="col s12" autoComplete="off" onSubmit={onSubmit}>
-                <input autoComplete="false" name="hidden" type="text" style={inputStyle}/>
+                <input autoComplete="anyrandomstring" name="hidden" type="text" style={inputStyle}/>
                     <div className="row">
                         <div className="input-field col s12">
                             <input  placeholder="Name" id="_name" type="text" className="validate" name="name" value={name} onChange={onInputChange} />
