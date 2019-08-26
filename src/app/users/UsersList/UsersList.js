@@ -5,6 +5,7 @@ const UserList = (props) => {
     const { listOfUsers, onSearchChange, inputValue } = props;
     return (
         <>
+        
             <div className="row">
                 <div className="col s12">
                     <div className="user-list-search">

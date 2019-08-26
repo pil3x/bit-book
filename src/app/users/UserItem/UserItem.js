@@ -7,7 +7,7 @@ const UserItem = (props) => {
     const errorIMG = "https://roundhouse-assets.s3.amazonaws.com/assets/Image/15214-fitandcrop-1200x681.jpg";
     return (
         <>
-            <div className="col s4 m4">
+          <div className="col s12 m4">
                 <div className="user-item card">
                     <div className="card-image">
                         <Link to={`/people/${user.id}`} > {(!user.avatarUrl) ? <img src={errorIMG} alt="img" /> : <img src={user.avatarUrl} alt="img" />} </ Link>
@@ -19,6 +19,7 @@ const UserItem = (props) => {
                     </div>
                 </div>
             </div>
+          
         </>
     )
 }
