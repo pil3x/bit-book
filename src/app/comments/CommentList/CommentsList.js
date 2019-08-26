@@ -18,7 +18,7 @@ const CommentList = (props) => {
             {content}
 
                 {comments.map((comment, index) => {
-                    return <CommentItem key={index} comment={comment} />
+                    return <CommentItem  comment={comment}/>
                 })}
             </ul>
         </>

@@ -16,7 +16,6 @@ class LoggedUserProfile extends React.Component {
     loadUser(){
         fetchLoggedUser()
         .then(user => {
-            console.log(user);
             this.setState({user})
         })
     }
@@ -26,9 +25,7 @@ class LoggedUserProfile extends React.Component {
     }
  
     render() {
-
         const {user} = this.state;
-        // console.log(user.about);
 
         if (!user) {
             return <p>Loading...</p>

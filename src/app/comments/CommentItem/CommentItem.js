@@ -25,11 +25,9 @@ class CommentItem extends React.Component {
     }
 
     render() {
-
         const { comment } = this.props;
         const { user } = this.state;
         
-
         if (!user) {
             return <p>Loading...</p>
         }
